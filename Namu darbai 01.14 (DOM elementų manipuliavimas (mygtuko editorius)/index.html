@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="background">
+    <div>
+    <button id="my-button">Pavadinimas</button>
+    </div>
+    <div class="stilizavimas">
+<div class="tarpas">
+    <input type="text" id="tekstas" placeholder="Mygtuko pavadinimas"/>
+    <button class ="select" onclick="keistiPav()">Pritaikyti</button>
+</div>
+<div class="spalvinimas">
+    <h5>Pasirinkite fono spalvą:</h5>  
+    <input type="color" id="color"/>
+    <button class ="select" onclick="changeColor()">Pritaikyti</button>
+</div>
+<div class="tarpas">  
+    <input type="number" id="kiek-apvalinti" placeholder="Apvalinimas (px)"/>
+    <button class ="select" onclick="apvalinti()">Pritaikyti</button>
+</div>
+<div class="tarpas">  
+    <input type="number" id="padding" placeholder="Sk., paraščių šonams"/>
+    <button class ="select" onclick="paddLeftRight()">Pritaikyti</button>
+</div>
+<div class="tarpas">  
+    <input type="number" id="padding" placeholder="Sk., paraščių aukštis"/>
+    <button class ="select" onclick="paddTopBottom()">Pritaikyti</button>
+</div>
+<div class="tarp">  
+    <input type="number" id="borderSize" placeholder="Skaičius kraštinės dydžiui"/>
+    <input  class ="spalvosSelect" type="color" id="borderColor"/>
+    <button class ="select" onclick="krastinesStilius()">Pritaikyti</button>
+</div>
+<div class="tarpas">  
+    <label for="style">Pasirinkite kraštinės stilių:</label>
+    <select id="style">
+        <option value="solid">Solid</option>
+        <option value="dotted">Dotted</option>
+        <option value="dashed">Dashed</option>
+        <option value="double">Double</option>
+        <option value="none">None</option>
+      </select>
+    <button class ="select" onclick="borderStilius()">Pritaikyti</button>
+</div>
+</div>
+</div>
+    <script src="namu-darbai.js"></script>
+</body>
+</html>

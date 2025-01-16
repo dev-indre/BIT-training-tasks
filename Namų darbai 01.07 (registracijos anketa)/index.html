@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registracijos anketa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="background">
+   <div class="anketa">
+    <h2>Registracijos Anketa</h2>
+    <div>
+       <input type="text" id="name" placeholder="Jūsų vardas"/>
+    </div>
+    <div>
+        <input type="text" id="surname" placeholder="Jūsų pavardė"/>
+     </div>
+     <div>
+        <input type="date" id="data" placeholder="Įrašykite savo gimimo datą"/>
+     </div>
+    <div>
+    <input type="email" id="email" placeholder="Įrašykite savo el. pašto adresą">
+   </div>
+   <div>
+    <label class="arSutinkate" for="ar-sutinkate">Ar sutinkate su taisyklėmis ir sąlygomis?</label>
+    <input class="check" type="checkbox" id="ar-sutinkate">
+   </div>
+   <button class="btn" onclick="registracijaSekminga()">Registruotis</button>
+</div>
+</div>
+   <script src="anketa.js"></script>
+</body>
+</html>
