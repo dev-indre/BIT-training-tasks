@@ -16,8 +16,6 @@ while (index < 3) {
 }
 console.log(atsitiktiniai);
 
-
-
 // 2. Sukurkite funkciją, kuri console.log’e parašo tik skaičius iš masyvo M,
 // mažesnius nei N.
 
@@ -33,9 +31,6 @@ function mazesniNeiN(atsitiktiniai) {
   }
 }
 mazesniNeiN(atsitiktiniai);
-
-
-
 
 // 3. Sukurkite funkciją, countAllThrees(array), kuri suskaičiuotų,
 // kiek kartų pateiktame skaičių masyve yra pasikartojantis skaičius 3;
@@ -120,22 +115,92 @@ function throwCoin(kasIskrito) {
 }
 console.log(throwCoin(kasIskrito));
 
-
 // 7. Sukurkite funkciją, kuri imituoja monetos metimą 20 kartų,
 // suskaičiuokite kiek kartų iškrito skaičius, kiek kartų iškrito herbas.
 // Paskaičiuokite procentaliai, kokiu dažnumu krito herbas,
 // kokiu dažnumu krito skaičius;
 
-let kartaiMetimo = 20;
-let mestiHArbaS = 0;
+let kartaiMetimo = 0;
+let mestiH = 0;
+let mestiS = 0;
 
-function metimai(kasIskrito) {
+function metimai() {
   while (kartaiMetimo < 20) {
-    if (kasIskrito[kartaiMetimo] == 1) {
-      mestiHArbaS++;
+    let kasIskrito = rand(1, 2);
+    let ats = throwCoin(kasIskrito);
+
+    if (ats == "H - Herbas") {
+      mestiH++;
+    } else {
+      mestiS++;
     }
     kartaiMetimo++;
-    return `Herbas iškrito ${kartaiMetimo}`;
   }
+  console.log(
+    `Iškrito herbas ${mestiH} kartų, tai sudaro: ${
+      (mestiH / 20) * 100
+    }% visų metimų.`
+  );
+  console.log(
+    `Iškrito skaičius ${mestiS} kartų, tai sudaro: ${
+      (mestiS / 20) * 100
+    }% visų metimų.`
+  );
 }
-console.log(metimai(kasIskrito));
+
+metimai();
+
+// 8. Sukurkite funkciją sumAll(masyvas), kuri susumuoja visus masyvo elementus,
+//  bei gražina šią sumą kaip rezultatą;
+
+let masyvas = [1, 2, 3, 4, 5];
+let ind = 0;
+let suma = 0;
+
+function sumAll(masyvas) {
+  while (ind < masyvas.length) {
+    suma += masyvas[ind];
+    ind++;
+  }
+  return suma;
+}
+console.log(`Skaičių suma yra: ${sumAll(masyvas)}`);
+
+// 9. Sukurkite funkciją average(arr), kuri atranda visų masyve pateiktų
+// skaičių vidurkį; PVZ: average([1,2,3,4,5])//3
+
+let mas = [1, 2, 3, 4, 5, 3];
+let ind1 = 0;
+let ats = 0;
+let sum = 0;
+
+function average(mas) {
+  while (ind1 < mas.length) {
+    sum += mas[ind1];
+    ats = sum / mas.length;
+    ind1++;
+  }
+  return ats;
+}
+console.log(`Duotų skaičių vidurkis: ${average(mas)}`);
+
+// 10. Sukurkite funkciją findAllUniqueNumbers(masyvas),
+// kuri atranda masyve esančius unikalius skaičius. gražina juos
+// masyvo pavidalu: pvz: findAllUniqueNumbers([1,1,2,8,8,1, 4, 6]) // [1,2,8,4,6];
+
+const array = [1, 1, 2, 8, 8, 1, 4, 6, 56, 7, 6, 105, 42, 3, 3];
+console.log(array);
+const atfiltruoti = [];
+let ind2 = 0;
+
+function findAllUniqueNumbers(array) {
+  while (ind2 < array.length) {
+    if (!atfiltruoti.includes(array[ind2])) {
+      atfiltruoti.push(array[ind2]);
+    }
+    ind2++;
+  }
+  return atfiltruoti;
+}
+console.log(`Duoto masyvo unikalūs skaičiai: [${findAllUniqueNumbers(array)}]`);
+console.log(findAllUniqueNumbers(array));
