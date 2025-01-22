@@ -1,0 +1,36 @@
+*{
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+}
+#prekes {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;  
+    margin: 0;
+}
+.preke-kaina {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; 
+}
+.sarasas {
+    flex: 0.1; 
+    margin: 0;
+}
+.prekes-pav {
+    font-weight: bold;
+}
+.kaina {
+    color: rgb(114, 32, 177);
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+p {
+    margin: 0;
+}
