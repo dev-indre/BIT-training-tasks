@@ -8,24 +8,18 @@ const shoppingList = [
     { name: "Kiaušiniai", 
       price: 2.392 },
     { name: "Bananas", 
-      price: 1.194 },
+      price: 1.194 }
 ];
 
-let PrekiuHTML = "";
+
+let HTMLTekstas = "<ul class=\"italic\">"; 
+console.log(HTMLTekstas);
+
 for(let i = 0; i < shoppingList.length; i++){
-    PrekiuHTML += `<div class="preke-kaina">
-            <div class="sarasas name">
-        <ul>
-          <li class="prekes-pav">${shoppingList[i].name}</li>
-        </ul>
-    </div>     
-            <div class="kaina price">
-                <p>${shoppingList[i].price.toFixed(2)}€</p>
-            </div>
-        </div>`;
-};
+    HTMLTekstas += `<li>${shoppingList[i].name} - <span class="gray">${shoppingList[i].price.toFixed(2)}€</span></li>`
+}
 
-const prekesElement = document.querySelector("#prekes");
-prekesElement.innerHTML = PrekiuHTML;
-console.log(PrekiuHTML);
+HTMLTekstas += "</ul>";
+console.log(HTMLTekstas);
 
+document.body.insertAdjacentHTML("afterbegin", HTMLTekstas);

@@ -16,3 +16,18 @@ function sleptiMygtuka(){
     const mygtukas = h1.nextElementSibling;
     mygtukas.remove();
 }  
+
+function klausimoAtvaizdavimas(){
+  const h1 = document.querySelector("#slepti");
+  const h5 = document.createElement("h5"); 
+  h5.innerText = questions[0].question;
+
+  let HTMLTekstas = "<ul>"; 
+  questions[0].answers.forEach(answer => {
+      HTMLTekstas += `<li>${answer}</li>`
+  });
+  HTMLTekstas += "</ul>"; 
+  
+  h1.insertAdjacentElement("afterend", h5);
+  h5.insertAdjacentHTML("afterend", HTMLTekstas);
+}
