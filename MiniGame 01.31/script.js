@@ -24,7 +24,7 @@ let guesses = maxGuessed;
 function startTheGame() {
     startGame.style.display = "none"; 
     NumbForm.style.display = "block";
-  
+  document.getElementById("introduction").innerHTML = '';
 }
 startGame.addEventListener("click", startTheGame);
 
@@ -54,6 +54,7 @@ function inputNumb(event){
     image.style.display = "block";
     image.src ="./A_happy_panda_white_background.png";
     document.getElementById("btn").style.display = "none";
+    NumbForm.style.display = "none";
     newGame.style.display = "block";
     }
 
@@ -76,8 +77,7 @@ function startOver(){
     image.style.display = "none";
     newGame.style.display = "none";
     NumbForm.style.display = "block";
-    NumbForm.style.display = "none";
-    startGame.style.display = "block";
+    startGame.style.display = "none";
     NumbForm.reset();
     generuojamasSk = rand(1, 50);
     console.log(generuojamasSk);

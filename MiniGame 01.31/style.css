@@ -12,7 +12,7 @@ body{
     flex-direction: column;
     padding: 60px;
     align-items: center;
-    gap: 20px;
+    /* gap: 20px; */
 }
 h3{
     font-size: 40px;
@@ -32,8 +32,8 @@ input{
     border: 2px solid rgb(83, 64, 64);
 }
 #image{
-    width: 240px;
-    height: 390px;
+    width: 320px;
+    height: 500px;
 }
 #guessedNumb{
     display: flex;
@@ -43,4 +43,8 @@ input{
 }
 #btn{
     display: inline-block;
+}
+
+#guessCount{
+    margin-top: 30px;
 }
