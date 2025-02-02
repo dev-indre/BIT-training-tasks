@@ -19,15 +19,43 @@ function sleptiMygtuka(){
 
 function klausimoAtvaizdavimas(){
   const h1 = document.querySelector("#slepti");
-  const h5 = document.createElement("h5"); 
-  h5.innerText = questions[0].question;
-
-  let HTMLTekstas = "<ul>"; 
-  questions[0].answers.forEach(answer => {
-      HTMLTekstas += `<li>${answer}</li>`
-  });
-  HTMLTekstas += "</ul>"; 
+  const h3 = document.createElement("h3"); 
+  h3.innerText = questions[0].question;
   
-  h1.insertAdjacentElement("afterend", h5);
-  h5.insertAdjacentHTML("afterend", HTMLTekstas);
+  const button = document.createElement("button");
+  button.innerHTML = "Kitas klausimas";
+
+
+  let HTMLTekstas = '<ul class ="no-bubbles">'; 
+  questions[0].answers.forEach(answer => {
+     HTMLTekstas += `<li><input type="checkbox">${answer}</input></li>`
+  });
+   HTMLTekstas += "</ul>"; 
+  
+  h1.insertAdjacentElement("afterend", h3);
+  h3.insertAdjacentHTML("afterend", HTMLTekstas);
+
+  const mygtukas = h3.nextElementSibling;
+  mygtukas.insertAdjacentElement("afterend", button);
+
+  
+  
+  // Antram klausimui
+  let kitasKlausimas = 0;
+  button.addEventListener("click", () => {
+    kitasKlausimas++;
+
+    if (kitasKlausimas < questions.length) {
+      h3.innerText = questions[kitasKlausimas].question;
+      
+      let newHTMLTekstas = '<ul class ="no-bubbles">';
+      questions[kitasKlausimas].answers.forEach(answer => {
+        newHTMLTekstas += `<li><input type="checkbox">${answer}</li>`;
+      });
+      newHTMLTekstas += "</ul>";
+    } else {
+      button.innerText = "Rodyti rezultatus";
+    }
+  });
 }
+

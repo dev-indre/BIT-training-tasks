@@ -133,11 +133,29 @@
 
 // 9. Išvesti į consolę visą daugybos lentelę (ciklas cikle pagalba)
 
-function daugybosLentele() {
-  for (dauginamasis = 1; dauginamasis < 11; dauginamasis++) {
-    for (i = 1; i <= 10; i++) {
-      console.log(`${dauginamasis} * ${i} = ${dauginamasis * i}`);
-    }
-  }
-}
-daugybosLentele();
+// function daugybosLentele() {
+//   for (dauginamasis = 1; dauginamasis < 11; dauginamasis++) {
+//     for (i = 1; i <= 10; i++) {
+//       console.log(`${dauginamasis} * ${i} = ${dauginamasis * i}`);
+//     }
+//   }
+// }
+// daugybosLentele();
+
+
+
+
+
+// const automobilis =  {
+//     pavadinimas: "Audi",
+//     modelis: "cupe",
+//     metai: "2012",
+//     rida: "40000",
+//     savininkas: {
+//       vardas: "Petra",
+//       pavarde: "Sluota"
+//     }
+//   };
+//   automobilis.metai = "2024"
+//   console.log(automobilis.metai);
+//   console.log(automobilis.savininkas.pavarde);

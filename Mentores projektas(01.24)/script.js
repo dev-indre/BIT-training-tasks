@@ -3,8 +3,8 @@ function rand(min, max) {
   }
 
 // 1. Sugeneruokit atsitiktinių reikšmių masyvą, masyvo elementų skaičius 30.
-// Masyvo elementų reikšmės nuo 1 iki 10. Tai yra klasės mokinių vidurkiai. Rasti 
-// geriausiai besimokantį ir blogiausiai. 
+// Masyvo elementų reikšmės nuo 1 iki 10. Tai yra klasės mokinių vidurkiai. 
+// Rasti geriausiai besimokantį ir blogiausiai. 
 
 const atsitiktiniai = [];
 
@@ -27,12 +27,12 @@ for (let i = 0; i < masyvas.length; i++) {
     maz.push(masyvas[i]);
   }
 }
-
-return { didz, maz };
+return {didz, maz};
 }
 
 //console.log(kurtiSkaicius());
 //console.log(geriausiBlogiausi(atsitiktiniai));
+
 
 // 2. Studento trimestro disciplinų skaičius yra 7, kiekvienoje disciplinoje min 3 
 // pažymiai. Rasti studento semestro vidurkį. 
@@ -131,6 +131,7 @@ else if(maziauTukstancio > maziauSesiu && maziauTukstancio > maziauAstuoniu){
 //console.log(kiekKasGauna(atlyginimai));
 
 
+
 // 4.Parašyti f-ją kuri sudvigubintu masyvą. 
 // @example 
 // ['Ace', 10, true]  => ['Ace', 10, true,   'Ace', 10, true] 
@@ -141,6 +142,8 @@ function dvigubasMasyvas(array){
   }
   //console.log(dvigubasMasyvas(['Ace' , 10, true]));
   //console.log(dvigubasMasyvas([0, 1, 2, 3]));
+
+
 
 
 // 5. Parašyti funkciją, kuri stringų masyvo elementus transformuoja į didžiasias 
@@ -158,6 +161,8 @@ for (let i = 0; i < array.length; i++) {
   newArray.push(capitalizeArray); 
   };
 //console.log(newArray);
+
+
 
 
 // 6. Parašyti f-ją, kuri, gražintų masyvą su kito masyvo string ilgiais 
